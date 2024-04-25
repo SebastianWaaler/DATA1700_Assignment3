@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Tickets</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+
+</head>
+<body>
+<h1>Movie tickets</h1>
+Choose Movie
+<label for="movieSelector"></label>
+<select id="movieSelector" name="movie">
+  <option value="">Choose movie</option>
+  <option value="GoodWillHunting">Good Will Hunting</option>
+  <option value="Cars">Cars</option>
+  <option value="ToyStory">Toy Story</option>
+  <option value="MonstersInc">Monsters Inc</option>
+</select>
+<span class="error-message" id="movieError"></span>
+
+<br /><br />
+Number:
+<input type="number" id="number" min="0" value="" name="number"><span class="error-message" id="numberError"></span>
+<br /><br />
+First name:
+<input type="text" id="firstName" value="" placeholder="James" name="firstName"><span class="error-message" id="firstNameError"></span>
+<br />
+Last name:
+<input type="text" id="lastName" placeholder="Smith" name="lastName"><span class="error-message" id="lastNameError"></span>
+<br />
+Phone:
+<input type="tel" placeholder="123-45-678" id="phone" name="phone"><span class="error-message" id="phoneError"></span>
+<br />
+Email:
+<input type="email" placeholder="james.smith@example.com" id="email" name="email"><span class="error-message" id="emailError"></span>
+<br />
+<button onclick="buyTickets()" type="submit" id="buyTicket">Buy tickets</button>
+
+<h2>All tickets</h2>
+<div id="ticketList"></div>
+<button onclick="deleteTickets()">Delete tickets</button><br><br>
+
+<style>
+  .error-message {
+    color: red;
+  }
+
+  table, td, th{
+    border: solid black 1px;
+  }
+
+  table {
+    border-collapse: collapse;
+    padding: 3px;
+  }
+</style>
+</body>
+</html>
